@@ -1,7 +1,14 @@
 <?php
 function SEQUENCIACRESCENTE($array){
-
-    if(count($array) === 1){
+    $todos_iguais = true;
+    $primeira_posicao = $array[0];
+    for($i=0;$i < count($array);$i++){
+        if($primeira_posicao !== $array[$i]){
+            $primeira_posicao = false;
+            break;
+        }
+    }
+    if(count($array) === 1 || $todos_iguais){
         return true;
     }
     $posicao_retirada = 0;
@@ -13,7 +20,7 @@ function SEQUENCIACRESCENTE($array){
         
         $posicao_retirada++;
         $menor = min($novoArray)-1;
-        
+
         $sequencia = 0;
         foreach($novoArray as $num){
             if($num > $menor){

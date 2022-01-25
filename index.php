@@ -19,4 +19,4 @@ require_once "./functions/sequencia_crescente.php";
 var_dump(SECULOANO(101));
 var_dump(PRIMOS(10, 29));
 var_dump(BUSCADIFERENTES());
-var_dump(SEQUENCIACRESCENTE([123, -17, -5, 1, 2, 3, 12, 43, 45]));
+var_dump(SEQUENCIACRESCENTE([2, 2]));
